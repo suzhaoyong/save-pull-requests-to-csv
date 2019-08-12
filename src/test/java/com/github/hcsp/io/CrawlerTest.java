@@ -4,7 +4,6 @@ import com.opencsv.CSVReader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,7 +12,7 @@ import org.kohsuke.github.GitHub;
 
 public class CrawlerTest {
     @Test
-    public void test() throws IOException {
+    public void test() throws Exception {
         File tmp = File.createTempFile("csv", "");
         Crawler.savePullRequestsToCSV("golang/go", 30, tmp);
 
