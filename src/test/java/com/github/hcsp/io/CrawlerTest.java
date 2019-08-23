@@ -28,6 +28,6 @@ public class CrawlerTest {
                         .getPullRequest(Integer.parseInt(lastLine[0]));
 
         Assertions.assertEquals(pull.getUser().getLogin(), lastLine[1]);
-        Assertions.assertEquals(pull.getTitle(), lastLine[2]);
+        Assertions.assertTrue(pull.getTitle().contains(lastLine[2]));
     }
 }
